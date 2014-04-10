@@ -1,0 +1,9 @@
+/* Colour Vars */
+body {
+  background-color: #fef7e9; }
+
+#header {
+  width: 385px;
+  margin: 150px auto 0 auto; }
+  #header #primal-logo {
+    width: 385px; }

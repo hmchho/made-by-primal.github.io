@@ -1,0 +1,19 @@
+/* Colour Vars */
+$dark-brown: #2C2626;
+$dark-grey: #575652;
+$blue: #2ABFCB;
+$sandy-yellow: #F6E0AD;
+$light-sandy-yellow: #FEF2DA;
+
+
+body {
+	background-color: lighten( $light-sandy-yellow, 3% );
+}
+
+#header {
+	width: 385px;
+	margin: 150px auto 0 auto;
+	#primal-logo {
+		width: 385px;
+	}
+}
