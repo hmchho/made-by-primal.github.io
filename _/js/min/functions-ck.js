@@ -1,0 +1,1 @@
+!function(r){r(document).ready(function(){Modernizr.svg||r('img[src*="svg"]').attr("src",function(){return r(this).attr("src").replace(".svg",".png")})})}(window.jQuery);
