@@ -1,3 +1,8 @@
+/* Framework Imports */
+
+@import "bourbon";
+@import "bourbon", "neat";
+
 /* Colour Vars */
 $dark-brown: #2C2626;
 $dark-grey: #575652;
@@ -11,9 +16,10 @@ body {
 }
 
 #header {
-	width: 385px;
-	margin: 150px auto 0 auto;
+	margin-top: 150px;
+	@include outer-container;
 	#primal-logo {
-		width: 385px;
+		@include span-columns(6);
+		@include shift(3);
 	}
 }

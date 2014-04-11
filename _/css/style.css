@@ -1,9 +1,27 @@
+/* Framework Imports */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 /* Colour Vars */
 body {
   background-color: #fef7e9; }
 
 #header {
-  width: 385px;
-  margin: 150px auto 0 auto; }
+  margin-top: 150px;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  #header:after {
+    content: "";
+    display: table;
+    clear: both; }
   #header #primal-logo {
-    width: 385px; }
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    #header #primal-logo:last-child {
+      margin-right: 0; }
