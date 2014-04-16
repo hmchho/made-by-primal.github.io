@@ -1,25 +1,254 @@
-/* Framework Imports */
+/* Framework Imports
+============================================================================*/
 
 @import "bourbon";
 @import "bourbon", "neat";
 
-/* Colour Vars */
+/* Custom Mixins
+============================================================================*/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Center a Block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Custom Vars
+============================================================================*/
+
 $dark-brown: #2C2626;
 $dark-grey: #575652;
 $blue: #2ABFCB;
 $sandy-yellow: #F6E0AD;
-$light-sandy-yellow: #FEF2DA;
+$light-sandy-yellow: lighten( #FEF2DA, 3% );
 
+/* Fonts
+============================================================================*/
+
+@font-face {
+	font-family: 'GloberHeavy';
+	src: url('../fonts/2A9DB7_0_0.eot');
+	src: url('../fonts/2A9DB7_0_0.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/2A9DB7_0_0.woff') format('woff'),
+		 url('../fonts/2A9DB7_0_0.ttf') format('truetype'),
+		 url('../fonts/2A9DB7_0_0.svg#wf') format('svg');
+}
+  
+@font-face {
+	font-family: 'GloberxBold';
+	src: url('../fonts/2A9DB7_1_0.eot');
+	src: url('../fonts/2A9DB7_1_0.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/2A9DB7_1_0.woff') format('woff'),
+		 url('../fonts/2A9DB7_1_0.ttf') format('truetype'),
+		 url('../fonts//2A9DB7_1_0.svg#wf') format('svg');
+}
+
+/* HTML / Body
+============================================================================*/
+
+html { 
+    height: 100%;
+    margin: 0px;
+    background: url(../img/the-forest.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+} 
 
 body {
-	background-color: lighten( $light-sandy-yellow, 3% );
+	font-family: "kepler-std", serif;
+	padding: 0;
+	margin: 0;
+	line-height: 1.2;
+}
+
+/* Main Type Styles
+============================================================================*/
+
+h1, h2, h3 {
+	font-family: 'GloberxBold', sans-serif;
+	color: $dark-brown;
+}
+
+h1 {
+	font-size: em(40);
+	color: $light-sandy-yellow;
+}
+
+h2 {
+	font-size: em(35);	
+}
+
+h3 {
+	font-size: em(30);
+	margin-bottom: 10px;
+}
+
+p {
+	font-family: "kepler-std", serif;
+	font-size: em(20);
+	line-height: 1.5;
+	color: $dark-brown;
+}
+
+/* Button Styles
+============================================================================*/
+
+.btn {
+	border: 1px solid $light-sandy-yellow;
+	@include border-radius(4px);
+	color: $light-sandy-yellow;
+	text-decoration: none;
+	@include transition (all 0.2s ease-out);
+	font-family: "europa";
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 3px;
+	padding: 8px 13px 10px 13px;
+}
+
+.btn:hover {
+	background-color: rgba(255,255,255, 0.1);
+}
+
+/* Site Styles
+============================================================================*/
+
+/* Wrappers - to acheive full width BG color */
+
+.wrapper {
+	@include clearfix;
+	background-color: $light-sandy-yellow;
+}
+
+.dark {
+	background-color: $dark-brown;
+	border-bottom: 1px solid #565151;
+}
+
+/* Define all the containers */
+#header, .inner, #footer {
+	@include outer-container;
+	@include clearfix;
 }
 
 #header {
-	margin-top: 150px;
-	@include outer-container;
 	#primal-logo {
-		@include span-columns(6);
-		@include shift(3);
+		margin: 100px 0 50px 0;
+		@include span-columns(4);
+		@include shift(4);
 	} 
+	#hero {
+		@include span-columns(8);
+		@include shift(2);
+		text-align: center;
+		margin-bottom: 100px;
+		p {
+			font-family: "kepler-std", serif;
+			font-size: em(20);
+			color: $light-sandy-yellow;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.portfolio-intro {
+	@include span-columns(10);
+	@include shift(1);
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	h2 {
+		text-align: center;
+	}
+}
+
+.portfolio-piece {
+	@include span-columns(10);
+	@include shift(1);
+	//border-top: 1px solid $sandy-yellow;
+	padding: 80px 0;
+}
+
+.odd {
+	img {
+		width: 65%;
+		float: left;
+		margin-right: 5%;
+	}
+}
+
+.even {
+	img {
+		width: 65%;
+		float: right;
+		margin-left: 5%;
+	}
+}
+
+#clients {
+	@include span-columns(10);
+	@include shift(1);
+	padding: 80px 0 50px 0;
+	h2 {
+		color: $light-sandy-yellow;
+		text-align: center;
+	}
+	ul {
+		list-style-type: none;
+		margin: 50px 0 0 8%;
+		padding: 0;
+		li {
+			float: left;
+			width: 15%;
+			height: 150px;
+			margin-right: 10%;
+			.telstra {
+				width: 50%;
+			}
+			.setanta {
+				padding-top: 15px;
+			}
+			.anz {
+				width: 80%;
+				padding-top: 30px;
+			}
+			.roland {
+				margin-top: 40px;
+			}
+			.olympus {
+				margin-top: 30px;
+			}
+			.westpac {
+				margin-top: 30px;
+			}
+			.fisherpaykel {
+				margin-top: 35px;
+			}
+			.vb {
+				width: 85%;
+				padding-left: 15%
+			}
+		}
+	}
+}
+
+#contact-us {
+	@include span-columns(8);
+	@include shift(2);
+	text-align: center;
+	margin-bottom: 400px;
+	h2 {
+		color: $light-sandy-yellow;
+	}
+	p {
+		color: $light-sandy-yellow;
+	}
 }
