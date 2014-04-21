@@ -1,22 +1,239 @@
-/* Framework Imports */
+/* Framework Imports
+============================================================================*/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* Colour Vars */
-body {
-  background-color: #fef7e9; }
+/* Custom Mixins
+============================================================================*/
+/* Custom Vars
+============================================================================*/
+/* Fonts
+============================================================================*/
+@font-face {
+  font-family: 'GloberHeavy';
+  src: url("../fonts/2A9DB7_0_0.eot");
+  src: url("../fonts/2A9DB7_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2A9DB7_0_0.woff") format("woff"), url("../fonts/2A9DB7_0_0.ttf") format("truetype"), url("../fonts/2A9DB7_0_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: 'GloberxBold';
+  src: url("../fonts/2A9DB7_1_0.eot");
+  src: url("../fonts/2A9DB7_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2A9DB7_1_0.woff") format("woff"), url("../fonts/2A9DB7_1_0.ttf") format("truetype"), url("../fonts//2A9DB7_1_0.svg#wf") format("svg"); }
+/* HTML / Body
+============================================================================*/
+html {
+  height: 100%;
+  margin: 0px;
+  background: url(../img/the-forest.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; }
 
-#header {
-  margin-top: 150px;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  #header:after {
+body {
+  font-family: "kepler-std", serif;
+  padding: 0;
+  margin: 0;
+  line-height: 1.2; }
+
+/* Main Type Styles
+============================================================================*/
+h1, h2, h3 {
+  font-family: 'GloberxBold', sans-serif;
+  color: #2c2626; }
+
+h1 {
+  font-size: 1.875em;
+  color: #fef7e9; }
+
+h2 {
+  font-size: 1.875em; }
+
+h3 {
+  font-size: 1.5625em;
+  margin-bottom: 10px; }
+
+p {
+  font-family: "kepler-std", serif;
+  font-size: 1.25em;
+  line-height: 1.5;
+  color: #2c2626;
+  margin: 5px 0 20px 0; }
+
+/* Button Styles
+============================================================================*/
+.btn {
+  border: 1px solid #fef7e9;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  color: #fef7e9;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  font-family: "europa";
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3px;
+  padding: 8px 13px 10px 13px; }
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.btn-dark {
+  color: #2c2626;
+  border: 1px solid #2c2626; }
+
+.btn-dark:hover {
+  background-color: #afa2a2; }
+
+/* Site Styles
+============================================================================*/
+/* Wrappers - to acheive full width BG color */
+.wrapper {
+  background-color: #fef7e9; }
+  .wrapper:after {
     content: "";
     display: table;
     clear: both; }
+
+.wrapper-dark {
+  background-color: #2c2626;
+  border-bottom: 1px solid #565151; }
+
+/* Define all the containers */
+#header, .inner, #footer, #clients {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  #header:after, .inner:after, #footer:after, #clients:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #header:after, .inner:after, #footer:after, #clients:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+#header #primal-logo {
+  margin: 100px 0 50px 0;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%; }
+  #header #primal-logo:last-child {
+    margin-right: 0; }
+#header #hero {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  text-align: center;
+  margin-bottom: 100px; }
+  #header #hero:last-child {
+    margin-right: 0; }
+  #header #hero p {
+    font-family: "kepler-std", serif;
+    font-size: 1.25em;
+    color: #fef7e9;
+    margin-bottom: 50px; }
+
+.portfolio-intro {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center; }
+  .portfolio-intro:last-child {
+    margin-right: 0; }
+  .portfolio-intro h2 {
+    text-align: center; }
+
+.portfolio-piece {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%;
+  padding: 40px 0;
+  margin-bottom: 40px; }
+  .portfolio-piece:last-child {
+    margin-right: 0; }
+
+.odd {
+  text-align: center; }
+  .odd img {
+    width: 100%; }
+
+.even {
+  text-align: center; }
+  .even img {
+    width: 100%; }
+
+#clients {
+  padding: 50px 0; }
+  #clients:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #clients h2 {
+    color: #fef7e9;
+    text-align: center; }
+  #clients ul {
+    list-style-type: none;
+    margin: 50px 0 0 8%;
+    padding: 0; }
+    #clients ul li {
+      float: left;
+      width: 40%;
+      height: 150px;
+      margin-right: 5%; }
+      #clients ul li img {
+        width: 100%; }
+      #clients ul li .telstra {
+        width: 50%; }
+      #clients ul li .setanta {
+        padding-top: 15px; }
+      #clients ul li .anz {
+        width: 80%;
+        padding-top: 30px; }
+      #clients ul li .roland {
+        margin-top: 40px; }
+      #clients ul li .olympus {
+        margin-top: 30px; }
+      #clients ul li .westpac {
+        margin-top: 30px; }
+      #clients ul li .fisherpaykel {
+        margin-top: 35px; }
+      #clients ul li .vb {
+        width: 85%;
+        padding-left: 15%; }
+
+#contact-us {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  text-align: center;
+  padding: 50px 0;
+  margin-bottom: 200px; }
+  #contact-us:last-child {
+    margin-right: 0; }
+  #contact-us h2 {
+    color: #fef7e9; }
+  #contact-us p {
+    color: #fef7e9;
+    margin-bottom: 50px; }
+
+/* Responsive
+============================================================================*/
+@media (min-width: 560px) {
   #header #primal-logo {
     float: left;
     display: block;
@@ -25,3 +242,91 @@ body {
     margin-left: 25.58941%; }
     #header #primal-logo:last-child {
       margin-right: 0; }
+
+  #clients ul {
+    margin: 50px 0 0 20%; }
+    #clients ul li {
+      width: 30%;
+      margin-right: 12%; } }
+@media (min-width: 768px) {
+  #header #primal-logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%; }
+    #header #primal-logo:last-child {
+      margin-right: 0; }
+
+  h1 {
+    font-size: 2.5em; }
+
+  #clients ul li {
+    width: 20%;
+    margin-right: 10%; } }
+@media (min-width: 940px) {
+  h1 {
+    font-size: 2.5em; }
+
+  h2 {
+    font-size: 2.1875em; }
+
+  h3 {
+    font-size: 1.875em; }
+
+  #header #primal-logo {
+    margin: 100px 0 50px 0;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%; }
+    #header #primal-logo:last-child {
+      margin-right: 0; }
+  #header #hero {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%;
+    text-align: center;
+    margin-bottom: 100px; }
+    #header #hero:last-child {
+      margin-right: 0; }
+    #header #hero p {
+      font-family: "kepler-std", serif;
+      font-size: 1.25em;
+      color: #fef7e9;
+      margin-bottom: 50px; }
+
+  .portfolio-piece {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%;
+    border-top: none;
+    padding: 80px 0;
+    margin-bottom: 0; }
+    .portfolio-piece:last-child {
+      margin-right: 0; }
+
+  .odd {
+    text-align: left; }
+    .odd img {
+      width: 65%;
+      float: left;
+      margin-right: 5%; }
+
+  .even {
+    text-align: left; }
+    .even img {
+      width: 65%;
+      float: right;
+      margin-left: 5%; }
+
+  #clients ul {
+    margin: 50px 0 0 8%; }
+    #clients ul li {
+      width: 15%;
+      margin-right: 10%; } }
