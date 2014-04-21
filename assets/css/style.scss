@@ -78,16 +78,16 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: em(40);
+	font-size: em(30);
 	color: $light-sandy-yellow;
 }
 
 h2 {
-	font-size: em(35);	
+	font-size: em(30);	
 }
 
 h3 {
-	font-size: em(30);
+	font-size: em(25);
 	margin-bottom: 10px;
 }
 
@@ -96,6 +96,7 @@ p {
 	font-size: em(20);
 	line-height: 1.5;
 	color: $dark-brown;
+	margin: 5px 0 20px 0;
 }
 
 /* Button Styles
@@ -118,6 +119,15 @@ p {
 	background-color: rgba(255,255,255, 0.1);
 }
 
+.btn-dark {
+	color: $dark-brown;
+	border: 1px solid $dark-brown;
+}
+
+.btn-dark:hover {
+	background-color: lighten( $dark-brown, 50% );
+}
+
 /* Site Styles
 ============================================================================*/
 
@@ -128,13 +138,13 @@ p {
 	background-color: $light-sandy-yellow;
 }
 
-.dark {
+.wrapper-dark {
 	background-color: $dark-brown;
 	border-bottom: 1px solid #565151;
 }
 
 /* Define all the containers */
-#header, .inner, #footer {
+#header, .inner, #footer, #clients {
 	@include outer-container;
 	@include clearfix;
 }
@@ -142,8 +152,8 @@ p {
 #header {
 	#primal-logo {
 		margin: 100px 0 50px 0;
-		@include span-columns(4);
-		@include shift(4);
+		@include span-columns(8);
+		@include shift(2);
 	} 
 	#hero {
 		@include span-columns(8);
@@ -160,8 +170,8 @@ p {
 }
 
 .portfolio-intro {
-	@include span-columns(10);
-	@include shift(1);
+	@include span-columns(8);
+	@include shift(2);
 	margin-top: 50px;
 	margin-bottom: 50px;
 	text-align: center;
@@ -173,30 +183,27 @@ p {
 .portfolio-piece {
 	@include span-columns(10);
 	@include shift(1);
-	//border-top: 1px solid $sandy-yellow;
-	padding: 80px 0;
+	padding: 40px 0;
+	margin-bottom: 40px;
 }
 
 .odd {
+	text-align: center;
 	img {
-		width: 65%;
-		float: left;
-		margin-right: 5%;
+		width: 100%;
 	}
 }
 
 .even {
+	text-align: center;
 	img {
-		width: 65%;
-		float: right;
-		margin-left: 5%;
+		width: 100%;
 	}
 }
 
 #clients {
-	@include span-columns(10);
-	@include shift(1);
-	padding: 80px 0 50px 0;
+	@include clearfix;
+	padding: 50px 0;
 	h2 {
 		color: $light-sandy-yellow;
 		text-align: center;
@@ -206,10 +213,13 @@ p {
 		margin: 50px 0 0 8%;
 		padding: 0;
 		li {
+			img {
+				width: 100%;
+			}
 			float: left;
-			width: 15%;
+			width: 40%;
 			height: 150px;
-			margin-right: 10%;
+			margin-right: 5%;
 			.telstra {
 				width: 50%;
 			}
@@ -244,11 +254,135 @@ p {
 	@include span-columns(8);
 	@include shift(2);
 	text-align: center;
-	margin-bottom: 400px;
+	padding: 50px 0;
+	margin-bottom: 200px;
 	h2 {
 		color: $light-sandy-yellow;
 	}
 	p {
 		color: $light-sandy-yellow;
+		margin-bottom: 50px;
 	}
+}
+
+/* Responsive
+============================================================================*/
+
+
+@media (min-width: 560px) {
+
+	#header {
+		#primal-logo {
+			@include span-columns(6);
+			@include shift(3);
+		} 
+	}
+	
+	#clients {
+		ul {
+			margin: 50px 0 0 20%;
+			li {
+				width: 30%;
+				margin-right: 12%;
+			}
+		}
+	}
+	
+}
+
+@media (min-width: 768px) {
+
+	#header {
+		#primal-logo {
+			@include span-columns(4);
+			@include shift(4);
+		} 
+	}
+	
+	h1 {
+		font-size: em(40);
+	}
+	
+	#clients {
+		ul {
+			li {
+				width: 20%;
+				margin-right: 10%;
+			}
+		}
+	}
+
+}
+
+@media (min-width: 940px) {
+
+	h1 {
+		font-size: em(40);
+	}
+	
+	h2 {
+		font-size: em(35);	
+	}
+	
+	h3 {
+		font-size: em(30);
+	}
+
+	#header {
+		#primal-logo {
+			margin: 100px 0 50px 0;
+			@include span-columns(4);
+			@include shift(4);
+		} 
+		#hero {
+			@include span-columns(8);
+			@include shift(2);
+			text-align: center;
+			margin-bottom: 100px;
+			p {
+				font-family: "kepler-std", serif;
+				font-size: em(20);
+				color: $light-sandy-yellow;
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	.portfolio-piece {
+		@include span-columns(10);
+		@include shift(1);
+		border-top: none;
+		padding: 80px 0;
+		margin-bottom: 0;
+	}
+	
+	.odd {
+		text-align: left;
+		img {
+			width: 65%;
+			float: left;
+			margin-right: 5%;
+		}
+	}
+	
+	.even {
+		text-align: left;
+		img {
+			width: 65%;
+			float: right;
+			margin-left: 5%;
+		}
+	}
+	
+	#clients {
+		ul {
+			margin: 50px 0 0 8%;
+			li {
+				width: 15%;
+				margin-right: 10%;
+			}
+		}
+	}
+	
+
 }

@@ -41,21 +41,22 @@ h1, h2, h3 {
   color: #2c2626; }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 1.875em;
   color: #fef7e9; }
 
 h2 {
-  font-size: 2.1875em; }
+  font-size: 1.875em; }
 
 h3 {
-  font-size: 1.875em;
+  font-size: 1.5625em;
   margin-bottom: 10px; }
 
 p {
   font-family: "kepler-std", serif;
   font-size: 1.25em;
   line-height: 1.5;
-  color: #2c2626; }
+  color: #2c2626;
+  margin: 5px 0 20px 0; }
 
 /* Button Styles
 ============================================================================*/
@@ -79,6 +80,13 @@ p {
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.1); }
 
+.btn-dark {
+  color: #2c2626;
+  border: 1px solid #2c2626; }
+
+.btn-dark:hover {
+  background-color: #afa2a2; }
+
 /* Site Styles
 ============================================================================*/
 /* Wrappers - to acheive full width BG color */
@@ -89,20 +97,20 @@ p {
     display: table;
     clear: both; }
 
-.dark {
+.wrapper-dark {
   background-color: #2c2626;
   border-bottom: 1px solid #565151; }
 
 /* Define all the containers */
-#header, .inner, #footer {
+#header, .inner, #footer, #clients {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  #header:after, .inner:after, #footer:after {
+  #header:after, .inner:after, #footer:after, #clients:after {
     content: "";
     display: table;
     clear: both; }
-  #header:after, .inner:after, #footer:after {
+  #header:after, .inner:after, #footer:after, #clients:after {
     content: "";
     display: table;
     clear: both; }
@@ -112,8 +120,8 @@ p {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
-  margin-left: 34.11922%; }
+  width: 65.88078%;
+  margin-left: 17.05961%; }
   #header #primal-logo:last-child {
     margin-right: 0; }
 #header #hero {
@@ -136,8 +144,8 @@ p {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center; }
@@ -152,29 +160,27 @@ p {
   margin-right: 2.35765%;
   width: 82.94039%;
   margin-left: 8.5298%;
-  padding: 80px 0; }
+  padding: 40px 0;
+  margin-bottom: 40px; }
   .portfolio-piece:last-child {
     margin-right: 0; }
 
-.odd img {
-  width: 65%;
-  float: left;
-  margin-right: 5%; }
+.odd {
+  text-align: center; }
+  .odd img {
+    width: 100%; }
 
-.even img {
-  width: 65%;
-  float: right;
-  margin-left: 5%; }
+.even {
+  text-align: center; }
+  .even img {
+    width: 100%; }
 
 #clients {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
-  padding: 80px 0 50px 0; }
-  #clients:last-child {
-    margin-right: 0; }
+  padding: 50px 0; }
+  #clients:after {
+    content: "";
+    display: table;
+    clear: both; }
   #clients h2 {
     color: #fef7e9;
     text-align: center; }
@@ -184,9 +190,11 @@ p {
     padding: 0; }
     #clients ul li {
       float: left;
-      width: 15%;
+      width: 40%;
       height: 150px;
-      margin-right: 10%; }
+      margin-right: 5%; }
+      #clients ul li img {
+        width: 100%; }
       #clients ul li .telstra {
         width: 50%; }
       #clients ul li .setanta {
@@ -213,10 +221,112 @@ p {
   width: 65.88078%;
   margin-left: 17.05961%;
   text-align: center;
-  margin-bottom: 400px; }
+  padding: 50px 0;
+  margin-bottom: 200px; }
   #contact-us:last-child {
     margin-right: 0; }
   #contact-us h2 {
     color: #fef7e9; }
   #contact-us p {
-    color: #fef7e9; }
+    color: #fef7e9;
+    margin-bottom: 50px; }
+
+/* Responsive
+============================================================================*/
+@media (min-width: 560px) {
+  #header #primal-logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    #header #primal-logo:last-child {
+      margin-right: 0; }
+
+  #clients ul {
+    margin: 50px 0 0 20%; }
+    #clients ul li {
+      width: 30%;
+      margin-right: 12%; } }
+@media (min-width: 768px) {
+  #header #primal-logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%; }
+    #header #primal-logo:last-child {
+      margin-right: 0; }
+
+  h1 {
+    font-size: 2.5em; }
+
+  #clients ul li {
+    width: 20%;
+    margin-right: 10%; } }
+@media (min-width: 940px) {
+  h1 {
+    font-size: 2.5em; }
+
+  h2 {
+    font-size: 2.1875em; }
+
+  h3 {
+    font-size: 1.875em; }
+
+  #header #primal-logo {
+    margin: 100px 0 50px 0;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%; }
+    #header #primal-logo:last-child {
+      margin-right: 0; }
+  #header #hero {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%;
+    text-align: center;
+    margin-bottom: 100px; }
+    #header #hero:last-child {
+      margin-right: 0; }
+    #header #hero p {
+      font-family: "kepler-std", serif;
+      font-size: 1.25em;
+      color: #fef7e9;
+      margin-bottom: 50px; }
+
+  .portfolio-piece {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%;
+    border-top: none;
+    padding: 80px 0;
+    margin-bottom: 0; }
+    .portfolio-piece:last-child {
+      margin-right: 0; }
+
+  .odd {
+    text-align: left; }
+    .odd img {
+      width: 65%;
+      float: left;
+      margin-right: 5%; }
+
+  .even {
+    text-align: left; }
+    .even img {
+      width: 65%;
+      float: right;
+      margin-left: 5%; }
+
+  #clients ul {
+    margin: 50px 0 0 8%; }
+    #clients ul li {
+      width: 15%;
+      margin-right: 10%; } }
