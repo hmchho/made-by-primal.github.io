@@ -54,14 +54,13 @@ $light-sandy-yellow: lighten( #FEF2DA, 3% );
 /* HTML / Body
 ============================================================================*/
 
+* { 
+	margin: 0; 
+	padding: 0; 
+}
+
 html { 
-    height: 100%;
     margin: 0px;
-    background: url(../img/the-forest.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-	     -o-background-size: cover;
-	        background-size: cover;
 } 
 
 body {
@@ -69,6 +68,27 @@ body {
 	padding: 0;
 	margin: 0;
 	line-height: 1.2;
+}
+
+/* Full Screen BG
+============================================================================*/
+
+#bg { 
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+}
+		
+.bgwidth { 
+	width: 100%; 
+}
+
+.bgheight { 
+	height: 100%; 
+}
+		
+#page-wrap { 
+	position: relative; 
 }
 
 /* Main Type Styles

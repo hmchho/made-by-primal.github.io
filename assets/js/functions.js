@@ -12,6 +12,27 @@ $(document).ready(function (){
         return $(this).attr('src').replace('.svg', '.png');
     });
 	}
+	
+	//Full Screen Image
+	$(function() {   
+		var theWindow        = $(window),
+		    $bg              = $("#bg"),
+		    aspectRatio      = $bg.width() / $bg.height();
+		function resizeBg() {
+			if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+			    $bg
+			    	.removeClass()
+			    	.addClass('bgheight');
+			} else {
+			    $bg
+			    	.removeClass()
+			    	.addClass('bgwidth');
+			}
+		}
+		theWindow.resize(function() {
+			resizeBg();
+		}).trigger("resize");
+	});
 
 	
 });
