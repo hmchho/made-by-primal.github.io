@@ -57,12 +57,11 @@ $light-sandy-yellow: lighten( #FEF2DA, 3% );
 html { 
     height: 100%;
     margin: 0px;
-    background: url(../img/the-forest.jpg) no-repeat center center;
+    background: url(../img/the-forest.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
-	background-attachment: fixed;
 } 
 
 body {
