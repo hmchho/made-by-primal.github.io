@@ -73,14 +73,15 @@ h1 {
   font-size: 2em;
   color: #fef7e9;
   line-height: 1.5;
-  padding-top: 50px; }
+  padding-top: 20px; }
 
 h2 {
   font-size: 1.5625em; }
 
 h3 {
   font-size: 1.5625em;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  padding-top: 30px; }
 
 p {
   font-family: "kepler-std", serif;
@@ -171,7 +172,8 @@ p {
     font-family: "kepler-std", serif;
     font-size: 1.25em;
     color: #fef7e9;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    display: none; }
 
 .portfolio-intro {
   float: left;
@@ -254,8 +256,7 @@ p {
   width: 65.88078%;
   margin-left: 17.05961%;
   text-align: center;
-  padding: 200px 0;
-  margin-bottom: 200px; }
+  padding: 150px 0 200px 0; }
   #contact-us:last-child {
     margin-right: 0; }
   #contact-us h2 {
@@ -275,6 +276,8 @@ p {
     margin-left: 25.58941%; }
     #header #primal-logo:last-child {
       margin-right: 0; }
+  #header #hero p {
+    display: block; }
 
   #clients ul {
     margin: 50px 0 0 20%; }

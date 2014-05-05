@@ -53,6 +53,3 @@ $(document).ready(function (){
 
 });
 	
-if (document.body.clientWidth < 768) {
-        console.log('mobile');
-    }

@@ -120,7 +120,7 @@ h1 {
 	font-size: em(32);
 	color: $light-sandy-yellow;
 	line-height: 1.5;
-	padding-top: 50px;
+	padding-top: 20px;
 }
 
 h2 {
@@ -130,6 +130,7 @@ h2 {
 h3 {
 	font-size: em(25);
 	margin-bottom: 10px;
+	padding-top: 30px;
 }
 
 p {
@@ -210,6 +211,7 @@ p {
 			font-size: em(20);
 			color: $light-sandy-yellow;
 			margin-bottom: 50px;
+			display: none;
 		}
 	}
 }
@@ -299,8 +301,8 @@ p {
 	@include span-columns(8);
 	@include shift(2);
 	text-align: center;
-	padding: 200px 0;
-	margin-bottom: 200px;
+	padding: 150px 0 200px 0;
+	
 	h2 {
 		color: $light-sandy-yellow;
 	}
@@ -318,11 +320,19 @@ p {
 
 @media (min-width: 560px) {
 
+	
+
 	#header {
 		#primal-logo {
 			@include span-columns(6);
 			@include shift(3);
 		} 
+		
+		#hero {
+			p { display: block;
+				
+			}
+		}
 	}
 	
 	#clients {
@@ -350,6 +360,8 @@ p {
 		font-size: em(40);
 	}
 	
+	
+	
 	#clients {
 		ul {
 			li {
@@ -373,6 +385,8 @@ p {
 	
 	h3 {
 		font-size: em(30);
+		
+		
 	}
 
 	#header {
