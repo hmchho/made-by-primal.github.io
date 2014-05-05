@@ -335,6 +335,10 @@ p {
 		}
 	}
 	
+	h3 {
+		margin-top: 40px;
+	}	
+	
 	#clients {
 		ul {
 			margin: 50px 0 0 20%;
@@ -360,7 +364,13 @@ p {
 		font-size: em(40);
 	}
 	
+<<<<<<< HEAD
 	
+=======
+	h3 {
+		margin-top: 40px;
+	}
+>>>>>>> FETCH_HEAD
 	
 	#clients {
 		ul {
@@ -385,8 +395,12 @@ p {
 	
 	h3 {
 		font-size: em(30);
+<<<<<<< HEAD
 		
 		
+=======
+		margin-top: 0;
+>>>>>>> FETCH_HEAD
 	}
 
 	#header {

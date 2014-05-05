@@ -279,6 +279,9 @@ p {
   #header #hero p {
     display: block; }
 
+  h3 {
+    margin-top: 40px; }
+
   #clients ul {
     margin: 50px 0 0 20%; }
     #clients ul li {
@@ -297,6 +300,9 @@ p {
   h1 {
     font-size: 2.5em; }
 
+  h3 {
+    margin-top: 40px; }
+
   #clients ul li {
     width: 20%;
     margin-right: 10%; } }
@@ -308,7 +314,8 @@ p {
     font-size: 2.1875em; }
 
   h3 {
-    font-size: 1.875em; }
+    font-size: 1.875em;
+    margin-top: 0; }
 
   #header #primal-logo {
     margin: 100px 0 50px 0;
