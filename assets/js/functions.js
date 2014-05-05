@@ -1,5 +1,4 @@
-// remap jQuery to $
-(function($){
+
 
 
 /* trigger when page is ready */
@@ -13,41 +12,40 @@ $(document).ready(function (){
     });
 	}
 	
-	//Full Screen Image
-	$(function() {   
-		var theWindow        = $(window),
-		    $bg              = $("#bg"),
-		    aspectRatio      = $bg.width() / $bg.height();
-		function resizeBg() {
-			if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-			    $bg
-			    	.removeClass()
-			    	.addClass('bgheight');
-			} else {
-			    $bg
-			    	.removeClass()
-			    	.addClass('bgwidth');
-			}
-		}
-		theWindow.resize(function() {
-			resizeBg();
-		}).trigger("resize");
+	// Header Slide
+			
+	$(window).scroll(function() {
+	
+		var UserScroll;
+	    	UserScroll = $(this).scrollTop();
+	
+		if ( $(document).scrollTop() <= 900 ) {
+			
+			$('.header-cover').css({
+	    		'opacity' :  1-(UserScroll/600),
+	    		'transform' : 'translate(0px,' + -(UserScroll/2)+"px)"
+	    	});
+	    	
+			$('.header-wrap').css({
+	    		'transform' : 'translate(0px,' + (UserScroll/3)+"px)"
+	    	});
+
+	    }
+	    
+	    else  {
+		    $('.header-cover').css({
+	    		'opacity' :  '1',
+	    		'transform' : 'translate(0px, 0px)'
+	    	});
+	    	
+			$('.header-wrap').css({
+	    		'transform' : 'translate(0px, 0px)'
+	    	});
+	    }
+		
+		
 	});
+	    
 
-	
 });
-
-/* optional triggers
-
-$(window).load(function() {
 	
-});
-
-$(window).resize(function() {
-	
-});
-
-*/
-
-
-})(window.jQuery);

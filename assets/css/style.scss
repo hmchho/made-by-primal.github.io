@@ -68,10 +68,25 @@ body {
 	padding: 0;
 	margin: 0;
 	line-height: 1.2;
+	background-color: $dark-brown;
 }
 
 /* Full Screen BG
 ============================================================================*/
+
+.header-cover {
+	background-image: url(../img/the-forest.jpg);
+	background-position: center top;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	
+	z-index: 300;
+	width: 100%;
+	min-height: 750px;
+	height: 100%;
+	
+}
 
 #bg { 
 	position: fixed; 
@@ -88,7 +103,9 @@ body {
 }
 		
 #page-wrap { 
-	position: relative; 
+	position: relative;
+	z-index: 500; 
+	
 }
 
 /* Main Type Styles
@@ -100,12 +117,14 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: em(30);
+	font-size: em(32);
 	color: $light-sandy-yellow;
+	line-height: 1.5;
+	padding-top: 50px;
 }
 
 h2 {
-	font-size: em(30);	
+	font-size: em(25);	
 }
 
 h3 {
@@ -118,7 +137,7 @@ p {
 	font-size: em(20);
 	line-height: 1.5;
 	color: $dark-brown;
-	margin: 5px 0 20px 0;
+	margin: 20px 0 40px 0;
 }
 
 /* Button Styles
@@ -133,8 +152,8 @@ p {
 	font-family: "europa";
 	font-style: normal;
 	font-weight: 400;
-	letter-spacing: 3px;
-	padding: 8px 13px 10px 13px;
+	letter-spacing: 2px;
+	padding: 10px 20px 10px 20px;
 }
 
 .btn:hover {
@@ -156,22 +175,26 @@ p {
 /* Wrappers - to acheive full width BG color */
 
 .wrapper {
+	position: relative;
+	z-index: 3;
 	@include clearfix;
 	background-color: $light-sandy-yellow;
+	padding: 50px 0;
 }
 
 .wrapper-dark {
 	background-color: $dark-brown;
-	border-bottom: 1px solid #565151;
+	
 }
 
 /* Define all the containers */
-#header, .inner, #footer, #clients {
+.header-wrap, .inner, .footer-wrap, #clients {
 	@include outer-container;
 	@include clearfix;
 }
 
 #header {
+	
 	#primal-logo {
 		margin: 100px 0 50px 0;
 		@include span-columns(8);
@@ -276,7 +299,7 @@ p {
 	@include span-columns(8);
 	@include shift(2);
 	text-align: center;
-	padding: 50px 0;
+	padding: 200px 0;
 	margin-bottom: 200px;
 	h2 {
 		color: $light-sandy-yellow;
@@ -286,6 +309,8 @@ p {
 		margin-bottom: 50px;
 	}
 }
+
+
 
 /* Responsive
 ============================================================================*/
