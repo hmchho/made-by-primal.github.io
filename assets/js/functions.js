@@ -13,7 +13,9 @@ $(document).ready(function (){
 	}
 	
 	// Header Slide
-			
+	
+	if (document.body.clientWidth > 768) {
+        
 	$(window).scroll(function() {
 	
 		var UserScroll;
@@ -45,7 +47,12 @@ $(document).ready(function (){
 		
 		
 	});
+	
+	};
 	    
 
 });
 	
+if (document.body.clientWidth < 768) {
+        console.log('mobile');
+    }
