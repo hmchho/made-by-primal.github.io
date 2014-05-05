@@ -70,13 +70,13 @@ h1, h2, h3 {
   color: #2c2626; }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #fef7e9;
   line-height: 1.5;
-  padding-top: 20px; }
+  padding-top: 0px; }
 
 h2 {
-  font-size: 1.5625em; }
+  font-size: 1.75em; }
 
 h3 {
   font-size: 1.5625em;
@@ -154,16 +154,16 @@ p {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%;
-  margin-left: 17.05961%; }
+  width: 82.94039%;
+  margin-left: 8.5298%; }
   #header #primal-logo:last-child {
     margin-right: 0; }
 #header #hero {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%;
-  margin-left: 17.05961%;
+  width: 82.94039%;
+  margin-left: 8.5298%;
   text-align: center;
   margin-bottom: 100px; }
   #header #hero:last-child {
@@ -211,14 +211,16 @@ p {
     width: 100%; }
 
 #clients {
-  padding: 50px 0; }
+  padding: 20px 0; }
   #clients:after {
     content: "";
     display: table;
     clear: both; }
   #clients h2 {
     color: #fef7e9;
-    text-align: center; }
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px; }
   #clients ul {
     list-style-type: none;
     margin: 50px 0 0 8%;
@@ -256,14 +258,16 @@ p {
   width: 65.88078%;
   margin-left: 17.05961%;
   text-align: center;
-  padding: 150px 0 200px 0; }
+  padding: 100px 0 120px 0; }
   #contact-us:last-child {
     margin-right: 0; }
   #contact-us h2 {
-    color: #fef7e9; }
-  #contact-us p {
     color: #fef7e9;
     margin-bottom: 50px; }
+  #contact-us p {
+    color: #fef7e9;
+    margin-bottom: 50px;
+    display: none; }
 
 /* Responsive
 ============================================================================*/
@@ -286,7 +290,10 @@ p {
     margin: 50px 0 0 20%; }
     #clients ul li {
       width: 30%;
-      margin-right: 12%; } }
+      margin-right: 12%; }
+
+  #contact-us p {
+    display: block; } }
 @media (min-width: 768px) {
   #header #primal-logo {
     float: left;
@@ -314,8 +321,7 @@ p {
     font-size: 2.1875em; }
 
   h3 {
-    font-size: 1.875em;
-    margin-top: 0; }
+    font-size: 1.875em; }
 
   #header #primal-logo {
     margin: 100px 0 50px 0;

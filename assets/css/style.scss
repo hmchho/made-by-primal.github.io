@@ -117,14 +117,16 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: em(32);
+	font-size: em(24);
 	color: $light-sandy-yellow;
 	line-height: 1.5;
-	padding-top: 20px;
+	padding-top: 0px;
 }
 
 h2 {
-	font-size: em(25);	
+	font-size: em(28);
+	
+	
 }
 
 h3 {
@@ -198,12 +200,12 @@ p {
 	
 	#primal-logo {
 		margin: 100px 0 50px 0;
-		@include span-columns(8);
-		@include shift(2);
+		@include span-columns(10);
+		@include shift(1);
 	} 
 	#hero {
-		@include span-columns(8);
-		@include shift(2);
+		@include span-columns(10);
+		@include shift(1);
 		text-align: center;
 		margin-bottom: 100px;
 		p {
@@ -250,10 +252,12 @@ p {
 
 #clients {
 	@include clearfix;
-	padding: 50px 0;
+	padding: 20px 0;
 	h2 {
 		color: $light-sandy-yellow;
 		text-align: center;
+		padding-left: 20px;
+	padding-right: 20px;	
 	}
 	ul {
 		list-style-type: none;
@@ -301,14 +305,16 @@ p {
 	@include span-columns(8);
 	@include shift(2);
 	text-align: center;
-	padding: 150px 0 200px 0;
+	padding: 100px 0 120px 0;
 	
 	h2 {
 		color: $light-sandy-yellow;
+		margin-bottom: 50px;
 	}
 	p {
 		color: $light-sandy-yellow;
 		margin-bottom: 50px;
+		display: none;
 	}
 }
 
@@ -349,6 +355,13 @@ p {
 		}
 	}
 	
+	#contact-us {
+
+	p {
+		display: block;
+	}
+}
+	
 }
 
 @media (min-width: 768px) {
@@ -364,13 +377,13 @@ p {
 		font-size: em(40);
 	}
 	
-<<<<<<< HEAD
+
 	
-=======
+
 	h3 {
 		margin-top: 40px;
 	}
->>>>>>> FETCH_HEAD
+
 	
 	#clients {
 		ul {
@@ -395,12 +408,6 @@ p {
 	
 	h3 {
 		font-size: em(30);
-<<<<<<< HEAD
-		
-		
-=======
-		margin-top: 0;
->>>>>>> FETCH_HEAD
 	}
 
 	#header {
