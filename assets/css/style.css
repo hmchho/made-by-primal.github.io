@@ -283,9 +283,6 @@ p {
   #header #hero p {
     display: block; }
 
-  h3 {
-    margin-top: 40px; }
-
   #clients ul {
     margin: 50px 0 0 20%; }
     #clients ul li {
@@ -293,7 +290,9 @@ p {
       margin-right: 12%; }
 
   #contact-us p {
-    display: block; } }
+    display: block; }
+  #contact-us h2 {
+    margin-bottom: 0; } }
 @media (min-width: 768px) {
   #header #primal-logo {
     float: left;
@@ -307,18 +306,15 @@ p {
   h1 {
     font-size: 2.5em; }
 
-  h3 {
-    margin-top: 40px; }
-
   #clients ul li {
     width: 20%;
     margin-right: 10%; } }
 @media (min-width: 940px) {
   h1 {
-    font-size: 2.5em; }
+    font-size: 2.625em; }
 
   h2 {
-    font-size: 2.1875em; }
+    font-size: 2.25em; }
 
   h3 {
     font-size: 1.875em; }
@@ -342,11 +338,15 @@ p {
     margin-bottom: 100px; }
     #header #hero:last-child {
       margin-right: 0; }
+    #header #hero h1 {
+      padding-top: 50px; }
     #header #hero p {
       font-family: "kepler-std", serif;
-      font-size: 1.25em;
+      font-size: 1.375em;
       color: #fef7e9;
-      margin-bottom: 50px; }
+      margin-bottom: 50px;
+      margin-top: 30px;
+      line-height: 1.6; }
 
   .portfolio-piece {
     float: left;
@@ -378,4 +378,7 @@ p {
     margin: 50px 0 0 8%; }
     #clients ul li {
       width: 15%;
-      margin-right: 10%; } }
+      margin-right: 10%; }
+
+  #contact-us {
+    padding: 150px 0 200px 0; } }

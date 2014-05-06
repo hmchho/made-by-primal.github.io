@@ -341,9 +341,7 @@ p {
 		}
 	}
 	
-	h3 {
-		margin-top: 40px;
-	}	
+	
 	
 	#clients {
 		ul {
@@ -359,6 +357,10 @@ p {
 
 	p {
 		display: block;
+	}
+	
+	h2 {
+		margin-bottom: 0;
 	}
 }
 	
@@ -376,13 +378,7 @@ p {
 	h1 {
 		font-size: em(40);
 	}
-	
 
-	
-
-	h3 {
-		margin-top: 40px;
-	}
 
 	
 	#clients {
@@ -399,11 +395,11 @@ p {
 @media (min-width: 940px) {
 
 	h1 {
-		font-size: em(40);
+		font-size: em(42);
 	}
 	
 	h2 {
-		font-size: em(35);	
+		font-size: em(36);	
 	}
 	
 	h3 {
@@ -421,11 +417,18 @@ p {
 			@include shift(2);
 			text-align: center;
 			margin-bottom: 100px;
+			
+			h1 {
+				padding-top: 50px;
+			}
+			
 			p {
 				font-family: "kepler-std", serif;
-				font-size: em(20);
+				font-size: em(22);
 				color: $light-sandy-yellow;
 				margin-bottom: 50px;
+				margin-top: 30px;
+				line-height: 1.6;
 			}
 		}
 	}
@@ -464,6 +467,10 @@ p {
 				margin-right: 10%;
 			}
 		}
+	}
+	
+	#contact-us {
+		padding: 150px 0 200px 0;
 	}
 	
 
